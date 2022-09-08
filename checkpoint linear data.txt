@@ -1,0 +1,53 @@
+
+ALGORITHM SUM
+//PARTIE 1
+VAR
+   tab1,tab2,tab3 : ARRAY_OF INTEGER; 
+   t,t1,i,j,SUM,RESULT: INTEGER; 
+i=0;
+j=0;
+t=0;
+SUM=0;
+RESULT=0;
+
+BEGIN
+ while ( i < tab1.length ) {
+while ( j < tab2.length ) {
+  IF(tab1[i]==tab2[j])
+  i++;
+ELSE
+ tab3:=tab[i]
+ j:=0;
+ i++;
+ENDIF
+}
+}
+ 
+ENDIF
+ENDFOR
+ENDFOR
+ 
+
+
+//PARTIE 2
+
+  FOR i FROM 0 TO LENGHT.tab1  DO 
+  FOR j FROM 0 TO LENGHT.tab2  DO 
+  IF(tab1[i]==tab2[j])
+  tab3:=tab1[i];
+  i++;
+  j++;
+  
+ELSE
+ i++;
+ j:=0;
+ENDIF
+ENDFOR
+ENDFOR
+i:=0;
+while ( i < tab3.length ) {
+   SUM+= tab3[i];
+    i+= 1;
+} 
+RESULT:=SUM*2;
+END
