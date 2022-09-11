@@ -1,0 +1,61 @@
+PROCEDURE Dot_product(v1,v2 : ARRAY_OF INTEGER[3],ps:FLOAT)
+VAR
+    i:INTEGER;
+BEGIN
+   ps:=0;
+    FOR i FROM 0 TO v1.length -1 DO
+        ps:=ps+v1[i]*v2[i];
+        i++;
+    END_FOR
+END
+
+ALGORITHM orthogonal
+VAR
+    v1,v2 : ARRAY_OF INTEGER[3];
+    ps:=FLOAT;
+  
+
+BEGIN
+  write("v1");
+    Read(v1);
+    write("v2");
+    Read(v2);
+   Dot_product(v1,v2,ps)
+   write(ps);
+   IF (ps=0) THEN
+       write(orthogonal)
+   ELSE
+       write(not orthogonal)
+   END_IF
+END
+
+*******************************************************************************************
+FUNCTION Dot_product(v1,v2 : ARRAY_OF INTEGER[3]) 
+VAR
+       i,ps:INTEGER;
+       ps:FLOAT;
+BEGIN
+     FOR i FROM 0 TO v1.length -1  DO
+        ps:=ps+v1[i]*v2[i];
+        i++;
+    END_FOR
+    RETURN ps ;
+END
+
+ALGORITHM orthogonal
+VAR
+     v1,v2 : ARRAY_OF INTEGER[3];
+    ps:=FLOAT;
+BEGIN
+    write("v1");
+    Read(v1);
+    write("v2");
+    Read(v2);
+   ps:=Dot_product(v1,v2)
+  
+   IF (ps=0) THEN
+       write( orthogonal)
+   ELSE
+       write( not orthogonal)
+   END_IF
+END
